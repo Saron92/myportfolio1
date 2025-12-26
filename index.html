@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,21 +8,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  
+
   <!-- HEADER / NAV -->
   <header class="site-header">
     <div class="container nav-inner">
       <a class="brand" href="#home">Saron Markos</a>
+      <button id="menu-btn" class="menu-btn">☰</button>
 
-      <button id="menu-btn" class="menu-btn" aria-label="Toggle menu">☰</button>
-
-      <nav id="nav" class="nav">
-        <a class="nav-link" href="#home">Home</a>
-        <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#skills">Skills</a>
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#contact">Contact</a>
-      </nav>
+<nav id="nav" class="nav">
+  <a class="nav-link" href="#home">Home</a>
+  <a class="nav-link" href="#about">About</a>
+  <a class="nav-link" href="#skills">Skills</a>
+  <a class="nav-link" href="#projects">Projects</a>
+  <a class="nav-link" href="#contact">Contact</a>
+</nav>
     </div>
   </header>
 
@@ -33,17 +31,15 @@
       <div class="container hero-grid">
         <div class="hero-left">
           <h1>Hello — I'm <span class="accent">Saron Markos</span></h1>
-          <p class="lead">Web Developer &amp; Computer Science Student</p>
+          <p class="lead">Web Developer &amp; CS Student</p>
           <p class="hero-desc">
-            I build simple, effective projects and love learning new technologies. Currently focusing on web development,
-            database-backed apps, and practical Java projects.
+            I build simple, effective projects and love learning new technologies. Currently focusing on web development, database-backed apps, and practical Java projects.
           </p>
           <div class="hero-cta">
             <a class="btn" href="#projects">View Projects</a>
             <a class="btn ghost" href="mailto:saronna20new@gmail.com">Email me</a>
           </div>
         </div>
-
         <div class="hero-right">
           <div class="profile-card">
             <img src="images/saron_profile.jpg" alt="Saron Markos — profile photo" class="profile-img" />
@@ -80,7 +76,6 @@
     <!-- PROJECTS -->
     <section id="projects" class="section container projects">
       <h2 class="section-title">Projects</h2>
-
       <div class="project-grid">
         <!-- Project 1 -->
         <article class="project-card">
@@ -96,15 +91,12 @@
             </div>
           </div>
         </article>
-
         <!-- Project 2 -->
-
-Saron Markos, [12/5/2025 11:44 AM]
-<article class="project-card">
+        <article class="project-card">
           <img src="images/project2.jpg" alt="Personal Portfolio screenshot" />
           <div class="project-content">
             <h3>Personal Portfolio Website</h3>
-            <p>This portfolio (what you are installing) — a responsive, clean site built with HTML, CSS, and JavaScript.
+            <p>This portfolio — a responsive, clean site built with HTML, CSS, and JavaScript.
                Designed for clarity and to showcase student projects and skills.</p>
             <div class="project-meta">
               <span>HTML</span>
@@ -115,32 +107,30 @@ Saron Markos, [12/5/2025 11:44 AM]
         </article>
       </div>
     </section>
-    <section id="certificates">
-  <h2>Certificates</h2>
 
-  <div class="certificates-container">
-    <div class="certificate">
-      <img src="images/cert1.jpg" alt="Programming Fundamentals Certificate">
-      <p>Programming Fundamentals</p>
-    </div>
-
-    <div class="certificate">
-      <img src="images/cert2.jpg" alt="Advanced Java Programming Certificate">
-      <p>Advanced Java Programming</p>
-    </div>
-
-    <div class="certificate">
-      <img src="images/cert3.jpg" alt="Automata Theory Certificate">
-      <p>Automata Theory</p>
-    </div>
-  </div>
-</section>
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="section container">
+      <h2 class="section-title">Certificates</h2>
+      <div class="certificates-container">
+        <div class="certificate">
+          <img src="images/cert1.jpg" alt="Programming Fundamentals Certificate">
+          <p>Programming Fundamentals</p>
+        </div>
+        <div class="certificate">
+          <img src="images/cert2.jpg" alt="Advanced Java Programming Certificate">
+          <p>Advanced Java Programming</p>
+        </div>
+        <div class="certificate">
+          <img src="images/cert3.jpg" alt="Automata Theory Certificate">
+          <p>Automata Theory</p>
+        </div>
+      </div>
+    </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section container contact">
       <h2 class="section-title">Contact</h2>
       <p class="section-text">Want to discuss a project or give feedback? Email me at <a href="mailto:saronna20new@gmail.com">saronna20new@gmail.com</a></p>
-
       <form id="contact-form" class="contact-form" novalidate>
         <div class="form-row">
           <label>
@@ -152,12 +142,10 @@ Saron Markos, [12/5/2025 11:44 AM]
             <input type="email" id="email" name="email" placeholder="you@example.com" required />
           </label>
         </div>
-
         <label>
           <span>Message</span>
           <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
         </label>
-
         <div class="form-actions">
           <button class="btn" type="submit">Send message</button>
           <p id="form-msg" class="form-msg" aria-live="polite"></p>
