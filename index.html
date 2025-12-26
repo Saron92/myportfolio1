@@ -1,0 +1,178 @@
+Saron Markos, [12/5/2025 11:44 AM]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saron Markos — Portfolio</title>
+  <meta name="description" content="Portfolio of Saron Markos — Web Developer & Computer Science Student" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">Saron Markos</a>
+
+      <button id="menu-btn" class="menu-btn" aria-label="Toggle menu">☰</button>
+
+      <nav id="nav" class="nav">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1>Hello — I'm <span class="accent">Saron Markos</span></h1>
+          <p class="lead">Web Developer &amp; Computer Science Student</p>
+          <p class="hero-desc">
+            I build simple, effective projects and love learning new technologies. Currently focusing on web development,
+            database-backed apps, and practical Java projects.
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="mailto:saronna20new@gmail.com">Email me</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="profile-card">
+            <img src="images/saron_profile.jpg" alt="Saron Markos — profile photo" class="profile-img" />
+            <p class="profile-role">Web Developer • CS Student</p>
+            <p class="profile-contact"><a href="mailto:saronna20new@gmail.com">saronna20new@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container about">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-text">
+        I’m Saron Markos, a Computer Science student passionate about technology, creativity, and problem-solving.
+        I enjoy building simple, effective projects and continuously improving my skills through learning and practice.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Responsive Design</span>
+        <span class="skill">Java</span>
+        <span class="skill">C++</span>
+        <span class="skill">Basic Git</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container projects">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project-grid">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <img src="images/project.jpg" alt="Minimarket Management Database System screenshot" />
+          <div class="project-content">
+            <h3>Minimarket Management Database System</h3>
+            <p>A desktop/web database application for managing inventory, products, and sales for a small minimarket.
+               Features include product CRUD, sales recording, and simple reports.</p>
+            <div class="project-meta">
+              <span>Java</span>
+              <span>MySQL / SQLite</span>
+              <span>CRUD</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+
+Saron Markos, [12/5/2025 11:44 AM]
+<article class="project-card">
+          <img src="images/project2.jpg" alt="Personal Portfolio screenshot" />
+          <div class="project-content">
+            <h3>Personal Portfolio Website</h3>
+            <p>This portfolio (what you are installing) — a responsive, clean site built with HTML, CSS, and JavaScript.
+               Designed for clarity and to showcase student projects and skills.</p>
+            <div class="project-meta">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="certificates">
+  <h2>Certificates</h2>
+
+  <div class="certificates-container">
+    <div class="certificate">
+      <img src="images/cert1.jpg" alt="Programming Fundamentals Certificate">
+      <p>Programming Fundamentals</p>
+    </div>
+
+    <div class="certificate">
+      <img src="images/cert2.jpg" alt="Advanced Java Programming Certificate">
+      <p>Advanced Java Programming</p>
+    </div>
+
+    <div class="certificate">
+      <img src="images/cert3.jpg" alt="Automata Theory Certificate">
+      <p>Automata Theory</p>
+    </div>
+  </div>
+</section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-text">Want to discuss a project or give feedback? Email me at <a href="mailto:saronna20new@gmail.com">saronna20new@gmail.com</a></p>
+
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="form-row">
+          <label>
+            <span>Your name</span>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            <span>Your email</span>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </label>
+        </div>
+
+        <label>
+          <span>Message</span>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Send message</button>
+          <p id="form-msg" class="form-msg" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Saron Markos — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
