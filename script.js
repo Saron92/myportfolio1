@@ -1,54 +1,41 @@
-/* MENU TOGGLE (MOBILE) */
-const menuBtn = document.getElementById('menu-btn');
-const nav = document.getElementById('nav');
+document.addEventListener("DOMContentLoaded", () => {
 
-menuBtn.addEventListener('click', () => {
-  const shown = getComputedStyle(nav).display === 'flex';
-  nav.style.display = shown ? 'none' : 'flex';
-});
+  // Mobile menu toggle
+  const menuBtn = document.getElementById("menu-btn");
+  const nav = document.getElementById("nav");
 
-/* SMOOTH SCROLL FOR ANCHOR LINKS */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', function (e) {
-    const target = this.getAttribute('href');
-    if (target.length > 1) {
+  if (menuBtn && nav) {
+    menuBtn.addEventListener("click", () => {
+      nav.classList.toggle("nav-open");
+    });
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("nav-open");
+      });
+    });
+  }
+
+  // Contact form validation
+  const form = document.getElementById("contact-form");
+  const formMsg = document.getElementById("form-msg");
+
+  if (form) {
+    form.addEventListener("submit", e => {
       e.preventDefault();
-      const el = document.querySelector(target);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // close mobile nav after selection
-      if (window.innerWidth <= 640) nav.style.display = 'none';
-    }
-  });
+
+      if (!form.name.value || !form.email.value || !form.message.value) {
+        formMsg.textContent = "Please fill in all fields.";
+        formMsg.style.color = "red";
+        return;
+      }
+
+      formMsg.textContent = "Message sent successfully (demo).";
+      formMsg.style.color = "#9b6bff";
+      form.reset();
+    });
+  }
+
+  // Footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
 });
-
-/* CONTACT FORM VALIDATION (CLIENT-SIDE ONLY) */
-const form = document.getElementById('contact-form');
-const formMsg = document.getElementById('form-msg');
-
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
-
-    if (!name  !email  !message) {
-      formMsg.textContent = 'Please fill in all fields.';
-      formMsg.style.color = '#ff6b6b'; // bright red for error
-      return;
-    }
-    if (!/^\S+@\S+\.\S+$/.test(email)) {
-      formMsg.textContent = 'Please enter a valid email address.';
-      formMsg.style.color = '#ff6b6b'; // bright red for error
-      return;
-    }
-
-    // Simulate success (no backend)
-    formMsg.style.color = '#9b6bff'; // purple accent for success
-    formMsg.textContent = 'Message sent — thank you! (Demo form, does not actually send email.)';
-    form.reset();
-  });
-}
-
-/* FOOTER YEAR */
-document.getElementById('year').textContent = new Date().getFullYear();
